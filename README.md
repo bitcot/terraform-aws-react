@@ -47,7 +47,7 @@
           value = module.react.frntcloudfront_id
         }
         output "frntcloudfrontURL" {
-          description = "cloudfront url
+          description = "cloudfront url"
           value = module.react.frntcloudfrontURL
         }
         output "frntbucketname" {
