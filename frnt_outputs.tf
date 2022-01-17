@@ -8,6 +8,9 @@ output "frntcloudfrontURL" {
 output "frntbucketname" {
   value = aws_s3_bucket.bucket.id
 }
+output "codepipelinename" {
+  value = aws_codepipeline.codepipeline.name
+}
 
 
 

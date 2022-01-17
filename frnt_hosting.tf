@@ -96,11 +96,10 @@ resource "aws_cloudfront_distribution" "cdn" {
 ### if using custom domain comment this code   
   viewer_certificate {
     acm_certificate_arn            = var.cert_arn
-    cloudfront_default_certificate = var.cert_arn == null ? true : false
-    ssl_support_method             = var.cert_arn == null ? null : "sni-only"
-    minimum_protocol_version       = var.cert_arn == null ? "TLSv1" : var.minimum_client_tls_protocol_version
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1" 
   }
-  aliases = var.cert_arn == null ? null : [var.alias_domain_name_cloudfront]
+  aliases = [var.alias_domain_name_cloudfront]
   
   tags = {
     Environment = "${var.stack}-${var.environment}-${var.application}"
