@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "bucket" {
-      bucket =  "${var.stack}-${var.environment}-${var.application}-bucket"
+      bucket =  "${var.stack}-${var.environment}-${var.application}"
       tags = {
-        Name = "${var.stack}-${var.environment}-${var.application}-bucket"
+        Name = "${var.stack}-${var.environment}-${var.application}"
       }
     
       versioning {
