@@ -37,6 +37,10 @@
             * terraform plan 
             * terraform apply 
 
+    5. To destroy the created infrastructure, 
+
+            * terraform destroy
+
 # To get the outputs, 
     
     1. Create a file called outputs.tf along with main.tf creation.
@@ -54,7 +58,4 @@
           description = "frontend bucket name"
           value = module.react.frntbucketname
         }
-        output "codepipelinename" {
-          description = "codepipeline name"
-          value = module.react.codepipelinename
-        }
+
