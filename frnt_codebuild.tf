@@ -60,10 +60,10 @@ resource "aws_codebuild_project" "build" {
     type = "CODEPIPELINE"
   }
 
-  vpc_config {
-    vpc_id             = aws_default_vpc.default_vpc.id
-    subnets            = [aws_default_subnet.default_subnet_a.id]
-    security_group_ids = [module.security-group-codebuild.this_security_group_id]
-  }
+  # vpc_config {
+  #   vpc_id             = aws_default_vpc.default_vpc.id
+  #   subnets            = [aws_default_subnet.default_subnet_a.id]
+  #   security_group_ids = [module.security-group-codebuild.this_security_group_id]
+  # }
 
 }

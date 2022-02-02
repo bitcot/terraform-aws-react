@@ -147,15 +147,15 @@ policy_arn = aws_iam_policy.codebuild.arn
 
 ## END: Configure IAM roles, policies, instance profiles
 
-# code build sg
-module "security-group-codebuild" {
-source  = "terraform-aws-modules/security-group/aws"
-version = "3.1.0"
+# # code build sg
+# module "security-group-codebuild" {
+# source  = "terraform-aws-modules/security-group/aws"
+# version = "3.1.0"
 
-name         = "${var.stack}-${var.environment}-${var.application}-codebuild-sg"
-description  = "${var.stack}-${var.environment}-${var.application}-codebuild-sg"
-vpc_id       = aws_default_vpc.default_vpc.id
-egress_rules = ["all-all"]
-}
+# name         = "${var.stack}-${var.environment}-${var.application}-codebuild-sg"
+# description  = "${var.stack}-${var.environment}-${var.application}-codebuild-sg"
+# vpc_id       = aws_default_vpc.default_vpc.id
+# egress_rules = ["all-all"]
+# }
 
 
